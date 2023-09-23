@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Bank</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>WELCOME TO THE BANK</h1>
+    <header>
+        <h1 class="text-5xl text-center mt-6">WELCOME TO THE 
+            <span class="font-bold place-content-center text-violet-600">BANK</span>
+        </h1>
+    </header>
 
+    <main>
+        <section class="bg-blue-100 w-6/12 mx-auto mt-12 p-8 rounded-lg">
+            <h3 class="text-3xl mb-4 font-medium">Login</h3>
+            <div>
+                <input class="w-9/12 block mb-2 px-3 mb-4" id="user-email" type="email" placeholder="Email address">
+                <input class="w-9/12 block mb-2 px-3 mb-4" id="user-password" type="password" placeholder="Password">
+                <button id="btn-submit" class="bg-amber-400 px-8 py-2 text-white font-medium rounded-lg hover:bg-sky-700">Submit</button>
+            </div>
+        </section>
+    </main>
 
+    <script src="login.js"></script>
 </body>
 </html>
