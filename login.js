@@ -11,11 +11,11 @@ document.getElementById('btn-submit').addEventListener('click', function(){
     const password = passwordField.value;
     
     // step 4: verify the email and password. 
-    if (email === 'pranesh@gamil.com' && password === 'secret'){
-        console.log('valid user');
+    if (email === 'pranesh@gmail.com' && password === 'secret'){
+        window.location.href = 'bank.html';
     }
     else{
-        console.log('invalid user');
+        alert("User Email or Password is Invalid");
     }
 });
 
