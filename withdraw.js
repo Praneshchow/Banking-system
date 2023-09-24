@@ -14,24 +14,39 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     // step 2.(Withdraw part)
     const withdrawField = document.getElementById('withdraw-field');
     const newWithdrawAmount = withdrawField.value;
+    
+
+    // step 7. (clear the input field)
+    withdrawField.value = '';
+
+    // This is used for not taking invalid input. 
+    if (isNaN(newWithdrawAmount)){
+        alert('Please input the valid number');
+        return;
+    }
 
     // step 3.
     const withdrawTotalElement = document.getElementById('withdraw-total');
     const previousWithdrawTotal = withdrawTotalElement.innerText;
-
-    // step 4.
-    const currentWithdrawTotal = parseFloat(previousWithdrawTotal) + parseFloat(newWithdrawAmount);
-    withdrawTotalElement.innerText = currentWithdrawTotal;
+    
 
     // step 5. (Balance part)
     const balanceTotalElement = document.getElementById('balance-total');
     const previousBalanceTotal = balanceTotalElement.innerText;
+   
+    // For checking the valid balance. 
+    if (parseFloat(newWithdrawAmount)>parseFloat(previousBalanceTotal)){
+        alert('Balance Error');
+        return;
+    }
 
-    const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
+    // step 4. (withdraw add)
+    const currentWithdrawTotal = parseFloat(previousWithdrawTotal) + parseFloat(newWithdrawAmount);
+    withdrawTotalElement.innerText = currentWithdrawTotal;
+
+    // Balance Add.
+    const newBalanceTotal = parseFloat(previousBalanceTotal) - parseFloat(newWithdrawAmount);
     balanceTotalElement.innerText = newBalanceTotal;
-
-    // step 7. (clear the input field)
-    withdrawField.value = '';
 });
 
 

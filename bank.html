@@ -10,13 +10,13 @@
 <body>
     <header>
         <h1 class="text-5xl text-center mt-6">Dashboard 
-            <span class="font-bold place-content-center text-violet-600">User Profile</span>
+            <span class="font-bold place-content-center text-red-600">User Profile</span>
         </h1>
     </header>
 
     <main>
         <section class="mt-12">
-            <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
+            <div class="grid lg:grid-cols-3 gap-4 w-9/12 mx-auto text-white">
                 <!-- Deposit total  -->
                 <div class="bg-green-500 p-8 rounded-xl">
                     <h4 class="text-2xl">Deposit</h4>
@@ -30,30 +30,31 @@
                 <!-- Balance Total -->
                 <div class="bg-violet-500 p-8 rounded-xl">
                     <h4 class="text-2xl">Balance</h4>
-                    <h2 class="text-5xl">$<span id="balance-total">1000</span></h2>
+                    <h2 class="text-5xl">$<span id="balance-total">1580</span></h2>
                 </div>
             </div>
         </section>
 
         <!-- deposite and Withdraw -->
         <section class="mt-12">
-            <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto">
+            <div class="grid lg:grid-cols-2 gap-4 w-9/12 mx-auto">
                 <!-- Deposit -->
                 <div class="bg-fuchsia-500 p-8 rounded-xl">
                     <h4 class="text-2xl mb-4 text-white">Deposit Amount</h4>
-                    <input class="w-9/12 block mb-2 px-3 mb-4" id="deposit-field" type="number" placeholder="Enter Amount">
+                    <input class="block mb-2 px-3 mb-4 text-gray-900 text-sm rounded-lg w-full p-2.5" id="deposit-field" type="number" placeholder="Enter Amount">
                     <button id="btn-deposit" class="bg-amber-400 px-8 py-2 text-white font-medium rounded-lg hover:bg-sky-700">Deposit</button>
                 </div>
 
                 <!-- Withdraw -->
-                <div class="bg-indigo-500 p-8 rounded-xl">
+                <div class="bg-red-500 p-8 rounded-xl">
                     <h4 class="text-2xl mb-4 text-white">Withdraw Amount</h4>
-                    <input class="w-9/12 block mb-2 px-3 mb-4" id="withdraw-field" type="number" placeholder="Enter Amount">
-                    <button id="btn-withdraw" class="bg-amber-400 px-8 py-2 text-white font-medium rounded-lg hover:bg-sky-700">Deposit</button>
+                    <input class="block mb-2 px-3 mb-4 text-gray-900 text-sm rounded-lg w-full p-2.5" id="withdraw-field" type="number" placeholder="Enter Amount">
+                    <button id="btn-withdraw" class="bg-amber-400 px-8 py-2 text-white font-medium rounded-lg hover:bg-sky-700">Withdraw</button>
                 </div>
             </div>
         </section>
     </main>
+
 
     <!-- JS link -->
     <script src="deposit.js"></script>
