@@ -20,8 +20,8 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     withdrawField.value = '';           
 
     // This is used for not taking invalid input. 
-    if (isNaN(newWithdrawAmount)){
-        alert('Please input the valid number');
+    if (isNaN(newWithdrawAmount) || newWithdrawAmount == ''){
+        alert('Please input the valid Amount');
         return;
     }
 
@@ -36,7 +36,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
    
     // For checking the valid balance. 
     if (parseFloat(newWithdrawAmount)>parseFloat(previousBalanceTotal)){
-        alert('Balance Error');
+        alert('Balance is Not Sufficient');
         return;
     }
 

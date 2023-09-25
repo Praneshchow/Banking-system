@@ -21,8 +21,8 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     depositField.value = '';
      
     // This is used for not taking invalid input. 
-    if (isNaN(newDepositAmount)){
-        alert('Please input the valid number');
+    if (isNaN(newDepositAmount) || newDepositAmount == ''){
+        alert('Please input the valid Amount');
         return;
     }
 
