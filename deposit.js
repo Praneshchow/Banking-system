@@ -17,7 +17,15 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     const depositField = document.getElementById('deposit-field');       // depositField is deposit input. 
     const newDepositAmount = depositField.value;
     
+    // step 7. (deposit field will be clear) 
+    depositField.value = '';
      
+    // This is used for not taking invalid input. 
+    if (isNaN(newDepositAmount)){
+        alert('Please input the valid number');
+        return;
+    }
+
     // use innerText for taking the text 
     const depositTotalElement = document.getElementById('deposit-total');    // deposit output. 
     const previousDepositTotal = depositTotalElement.innerText;
@@ -35,7 +43,5 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     const currentBalanceTotal = parseFloat(previousBalanceTotal) + parseFloat(newDepositAmount);
     balanceTotalElement.innerText = currentBalanceTotal;
 
-    // step 7. (deposit field will be clear) 
-    depositField.value = ''; 
 });
 

@@ -17,7 +17,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     
 
     // step 7. (clear the input field)
-    withdrawField.value = '';
+    withdrawField.value = '';           
 
     // This is used for not taking invalid input. 
     if (isNaN(newWithdrawAmount)){
