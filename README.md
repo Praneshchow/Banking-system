@@ -5,4 +5,5 @@ In this project I made a banking system which can verify the person and Then cal
 User Email: pranesh@gmail.com
 User Password: 1234
 
-![Alt text](image\Login screenshot.png)
+<img src="image/Login screenshot.png" width="128"/>
+![Alt text](<image/Login screenshot.png>)
