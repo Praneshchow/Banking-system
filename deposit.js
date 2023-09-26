@@ -9,6 +9,20 @@
 // step 7: deposit field will be clear.
 */
 
+document.getElementById('btn-deposit').addEventListener('click', function(){
+    const newDepositAmount = getInputValue('deposit-field');
+    const previousDepositTotal = getTextElementValue('deposit-total');
+
+    const newDepositTotal = previousDepositTotal + newDepositAmount;
+    
+    setTextElementValue('deposit-total', newDepositTotal);           // total deposit set. 
+    const previousBalanceTotal = getTextElementValue('balance-total');
+    const newBalanceTotal = previousBalanceTotal + newDepositAmount;
+    setTextElementValue('balance-total', newBalanceTotal);
+});
+
+
+/*
 
 // Step 1: (First click the button. Than it works)
 document.getElementById('btn-deposit').addEventListener('click', function(){
@@ -45,3 +59,4 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
 
 });
 
+*/
