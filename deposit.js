@@ -9,8 +9,15 @@
 // step 7: deposit field will be clear.
 */
 
+
 document.getElementById('btn-deposit').addEventListener('click', function(){
     const newDepositAmount = getInputValue('deposit-field');
+
+    // This is used for not taking invalid input. 
+    if (isNaN(newDepositAmount) || typeof(newDepositAmount) === 'string'){
+        alert('Please input the valid Amount');
+        return;
+    }    
     const previousDepositTotal = getTextElementValue('deposit-total');
 
     const newDepositTotal = previousDepositTotal + newDepositAmount;
